@@ -41,6 +41,7 @@ jobs:
   
   test-build-on-windows:
     runs-on: windows-2022
+    needs: build_on_windows
     steps:
       - name: download exe file
         uses: actions/download-artifact@v4
