@@ -19,7 +19,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: git clone respository
         run: |
-          git clone git@github.com:qingyueyiyun/git-action-one.git
+          git clone https://github.com/qingyueyiyun/git-action-one.git
           cd git-action-one
       - name: pip requirements.txt
         run: pip install -y requirements.txt
