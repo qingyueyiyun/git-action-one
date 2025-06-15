@@ -21,7 +21,7 @@ jobs:
         run: |
           git clone https://github.com/qingyueyiyun/git-action-one.git
           cd git-action-one
-      - name: pip install requirements.txt
-        run: pip install -r requirements.txt
+      - name: pip install pytest
+        run: pip install pytest
       - name: run pytest
         run: pytest
