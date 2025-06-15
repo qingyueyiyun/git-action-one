@@ -23,3 +23,16 @@ jobs:
         run: pip install pytest
       - name: run pytest
         run: pytest
+  
+  build_on_windows:
+    runs-on: windows-2022
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: install pyinstaller
+        run: pip install pyinstaller
+      - name: build exe
+        run: pyinstaller sha256.py -F
+      - name: upload exe file
+        uses: actions/upload-artifact@v4
+        path: dist/sha256.exe
